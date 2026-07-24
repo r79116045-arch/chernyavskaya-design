@@ -12,9 +12,14 @@ export const contacts = {
   phoneRaw: "79829196695",
   /** Как показываем человеку: "+7 (912) 345-67-89" */
   phoneHuman: "+7 (982) 919-66-95",
-  /** Ник без @: "daria_design" */
-  telegram: "",
-  /** Персональная ссылка MAX целиком, как прислала Дарья */
+  /** Ник без @ ("daria_design") ИЛИ телефон в формате "+79...". Телефонный формат
+      работает через t.me/+номер (решение Петра 23.07: у Дарьи TG привязан к номеру);
+      когда Дарья пришлёт ник — заменить: ссылка с ником красивее и не зависит
+      от её настройки «кто может найти меня по номеру». */
+  telegram: "+79829196695",
+  /** Персональная ссылка MAX целиком, как прислала Дарья.
+      ⚠️ По НОМЕРУ ссылок в MAX НЕ СУЩЕСТВУЕТ (проверено 23.07, help.max.ru) —
+      только ссылка профиля: в MAX «Поделиться профилем». Ждём от Дарьи. */
   maxUrl: "",
   /** Почта для юридических обращений (152-ФЗ: отзыв согласия) */
   email: "ap1688@yandex.ru",
@@ -22,10 +27,13 @@ export const contacts = {
 
 export const tel = () => (contacts.phoneRaw ? `tel:+${contacts.phoneRaw}` : "");
 
-/** Ссылка в Telegram с предзаполненным текстом (в tel: параметры не подставляем) */
+/** Ссылка в Telegram с предзаполненным текстом (в tel: параметры не подставляем).
+    Для телефонного формата (+7...) текст НЕ подставляем: t.me/+номер его не гарантирует. */
 export const tgLink = (text?: string) =>
   contacts.telegram
-    ? `https://t.me/${contacts.telegram}${text ? `?text=${encodeURIComponent(text)}` : ""}`
+    ? contacts.telegram.startsWith("+")
+      ? `https://t.me/${contacts.telegram}`
+      : `https://t.me/${contacts.telegram}${text ? `?text=${encodeURIComponent(text)}` : ""}`
     : "";
 
 export const maxLink = () => contacts.maxUrl || "";
