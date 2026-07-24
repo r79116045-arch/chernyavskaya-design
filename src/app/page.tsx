@@ -153,15 +153,9 @@ export default function Home() {
         </section>
       )}
 
-      {/* СПЛИТ-«ДВЕРИ» разделов */}
-      <section className="grid md:grid-cols-2 min-h-[320px]">
-        <Link
-          href="/portfolio/"
-          className="flex flex-col items-center justify-center gap-3 py-16 bg-ivory-dark hover:brightness-[1.04] transition-[filter] duration-300"
-        >
-          <span className="font-display text-h2 tracking-[0.08em]">Портфолио</span>
-          <span className="caps-wide text-graphite/80">смотреть проекты</span>
-        </Link>
+      {/* ДВЕРЬ «Услуги и цены» — одна: дверь «Портфолио» была дублем сетки проектов
+          (карточки + «все проекты →» уже ведут туда), убрана по замечанию Петра 23.07 */}
+      <section className="min-h-[280px] grid">
         <Link
           href="/uslugi/"
           className="flex flex-col items-center justify-center gap-3 py-16 bg-choco text-ivory hover:brightness-[1.08] transition-[filter] duration-300"
