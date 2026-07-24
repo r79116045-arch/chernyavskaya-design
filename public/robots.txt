@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# TODO(домен): добавить строку Sitemap: https://<домен>/sitemap.xml после запуска

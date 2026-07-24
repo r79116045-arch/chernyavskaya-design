@@ -1,0 +1,33 @@
+{
+  "title": "Дом с мансардой",
+  "city": "Тюмень",
+  "type": "дом",
+  "order": 1,
+  "desc": "Двухуровневая квартира с мансардой: кухня-столовая под открытыми деревянными балками и кирпичной кладкой, гостиная с синими акцентами и арочными проёмами, ёлочка-паркет.",
+  "kind": "photo",
+  "cover": "002.jpg",
+  "hero": "002.jpg",
+  "featured": "012.jpg",
+  "kinds": {
+    "001.jpg": "render",
+    "002.jpg": "render",
+    "003.jpg": "render",
+    "004.jpg": "render",
+    "008.jpg": "render",
+    "011.jpg": "render",
+    "012.jpg": "render",
+    "014.jpg": "render",
+    "015.jpg": "render",
+    "019.jpg": "photo",
+    "020.jpg": "photo",
+    "021.jpg": "photo",
+    "023.jpg": "photo",
+    "030.jpg": "photo",
+    "031.jpg": "photo",
+    "032.jpg": "photo",
+    "035.jpg": "photo",
+    "039.jpg": "photo",
+    "040.jpg": "photo",
+    "041.jpg": "photo"
+  }
+}

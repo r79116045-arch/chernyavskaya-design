@@ -1,0 +1,42 @@
+# Кэш, сжатие и MIME-типы для статического хостинга (Apache).
+# Обязательное условие AVIF/WebP: без правильного MIME браузер их не примет.
+
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+</IfModule>
+
+# Сжатие текстовых ресурсов
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# Долгий кэш для картинок, шрифтов, JS/CSS (у Next хэш в имени файла)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(avif|webp|jpe?g|woff2|css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Заявки и журнал согласий наружу не отдаём
+  <FilesMatch "\.(config\.php)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
+# Каталог с журналом согласий (создаётся form.php вне вебрута; на всякий случай)
+<IfModule mod_authz_core.c>
+  <DirectoryMatch "\.leads">
+    Require all denied
+  </DirectoryMatch>
+</IfModule>

@@ -1,0 +1,8 @@
+node_modules/
+.next/
+out/
+# бэкапы оригиналов фото (photo-fit) — не канон, живут рядом
+_originals/
+# деривативы генерятся из мастеров командой pnpm photos
+public/images/projects/*/_v/
+*.log
