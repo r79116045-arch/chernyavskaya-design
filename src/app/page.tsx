@@ -12,7 +12,9 @@ import { tgLink } from "@/lib/contacts";
  */
 export default function Home() {
   const featured = projects[0];
-  const grid = projects.slice(0, 3);
+  // 3 ряда лучших (просьба Петра 23.07); за бортом только самый тонкий кейс
+  // molodezhnyi (11 фото, тёмная обложка) — он остаётся в полном /portfolio
+  const grid = projects.filter((p) => p.slug !== "molodezhnyi").slice(0, 9);
   const tg = tgLink("Здравствуйте! Пишу с сайта — хочу обсудить свой интерьер.");
 
   return (
