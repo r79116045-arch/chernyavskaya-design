@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LeadForm from "@/components/LeadForm";
-import { contacts, tel, tgLink, maxLink, hasAnyContact } from "@/lib/contacts";
+import { contacts, tel, channels, hasAnyContact } from "@/lib/contacts";
+import ChannelButtons from "@/components/ChannelButtons";
 
 export const metadata: Metadata = {
   title: "Контакты — записаться на бесплатную консультацию",
@@ -63,28 +64,8 @@ export default function Kontakty() {
                   {contacts.phoneHuman}
                 </a>
               )}
-              <div className="flex flex-wrap gap-2.5">
-                {contacts.telegram && (
-                  <a
-                    href={tgLink("Здравствуйте! Пишу с сайта.")}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn !py-2.5 !px-4 border border-graphite/55 font-ui text-ui"
-                  >
-                    Telegram
-                  </a>
-                )}
-                {contacts.maxUrl && (
-                  <a
-                    href={maxLink()}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn !py-2.5 !px-4 border border-graphite/55 font-ui text-ui"
-                  >
-                    MAX
-                  </a>
-                )}
-              </div>
+              {/* телефон написан строкой выше — тут только мессенджеры-иконки */}
+              <ChannelButtons items={channels("Здравствуйте! Пишу с сайта.").filter((c) => c.kind !== "tel")} />
             </div>
 
             {!hasAnyContact() && (

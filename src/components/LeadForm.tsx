@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { channels } from "@/lib/contacts";
+import ChannelButtons from "@/components/ChannelButtons";
 
 type Status = "idle" | "sending" | "ok" | "fail";
 
@@ -125,18 +126,8 @@ export default function LeadForm({ context }: { context?: string }) {
             Заявка принята — отвечу в течение дня. Если удобнее сразу, вот прямые каналы:
           </p>
           {live.length > 0 && (
-            <div className="flex flex-wrap gap-2.5 mt-5">
-              {live.map((c) => (
-                <a
-                  key={c.kind}
-                  href={c.href}
-                  target={c.kind === "tel" ? undefined : "_blank"}
-                  rel={c.kind === "tel" ? undefined : "noopener noreferrer"}
-                  className="btn !py-2.5 !px-4 border border-graphite/55 font-ui text-ui"
-                >
-                  {c.label}
-                </a>
-              ))}
+            <div className="mt-5">
+              <ChannelButtons items={live} />
             </div>
           )}
         </div>
@@ -227,18 +218,8 @@ export default function LeadForm({ context }: { context?: string }) {
                 {live.length > 0 ? "Свяжитесь напрямую — так быстрее:" : "Попробуйте, пожалуйста, ещё раз."}
               </p>
               {live.length > 0 && (
-                <div className="flex flex-wrap gap-2.5 mt-3">
-                  {live.map((c) => (
-                    <a
-                      key={c.kind}
-                      href={c.href}
-                      target={c.kind === "tel" ? undefined : "_blank"}
-                      rel={c.kind === "tel" ? undefined : "noopener noreferrer"}
-                      className="btn !py-2.5 !px-4 border border-graphite/55 font-ui text-ui"
-                    >
-                      {c.label}
-                    </a>
-                  ))}
+                <div className="mt-3">
+                  <ChannelButtons items={live} />
                 </div>
               )}
             </div>
@@ -247,19 +228,9 @@ export default function LeadForm({ context }: { context?: string }) {
       )}
 
       {status === "idle" && live.length > 0 && (
-        <div className="flex flex-wrap gap-2.5 mt-4 pt-4 border-t border-graphite/10">
-          <span className="caps text-graphite/70 w-full mb-1">или напишите напрямую</span>
-          {live.map((c) => (
-            <a
-              key={c.kind}
-              href={c.href}
-              target={c.kind === "tel" ? undefined : "_blank"}
-              rel={c.kind === "tel" ? undefined : "noopener noreferrer"}
-              className="btn !py-2.5 !px-4 border border-graphite/55 font-ui text-ui"
-            >
-              {c.label}
-            </a>
-          ))}
+        <div className="mt-4 pt-4 border-t border-graphite/10">
+          <span className="caps text-graphite/70 block mb-3">или напишите напрямую</span>
+          <ChannelButtons items={live} />
         </div>
       )}
     </div>
