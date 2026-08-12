@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="caps text-graphite/60 mb-2.5">Связь</p>
+            <p className="caps text-graphite/70 mb-2.5">Связь</p>
             {contacts.phoneRaw && (
               <a href={tel()} className="block font-ui text-ui text-graphite hover:text-wine">
                 {contacts.phoneHuman}
@@ -38,23 +38,29 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="caps text-graphite/60 mb-2.5">Документы</p>
+            <p className="caps text-graphite/70 mb-2.5">Разделы</p>
             <Link
-              href="/privacy/"
+              href="/portfolio/"
               className="block font-ui text-micro text-graphite/80 hover:text-graphite"
             >
-              Политика конфиденциальности
+              Портфолио
             </Link>
             <Link
-              href="/soglasie/"
+              href="/uslugi/"
               className="block font-ui text-micro text-graphite/80 hover:text-graphite mt-1.5"
             >
-              Согласие на обработку данных
+              Услуги и цены
+            </Link>
+            <Link
+              href="/kontakty/"
+              className="block font-ui text-micro text-graphite/80 hover:text-graphite mt-1.5"
+            >
+              Контакты
             </Link>
           </div>
         </div>
 
-        <p className="font-ui text-micro text-graphite/60 mt-10 pt-5 border-t border-graphite/10">
+        <p className="font-ui text-micro text-graphite/70 mt-10 pt-5 border-t border-graphite/10">
           © {year} · Дарья Чернявская · все права защищены
         </p>
       </div>

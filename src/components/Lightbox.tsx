@@ -65,7 +65,7 @@ export default function Lightbox({
                 cursor: "zoom-in",
                 ...(ratio ? { maxWidth: `calc(var(--frame-h) * ${ratio.toFixed(4)})` } : {}),
               }}
-              aria-label="Открыть кадр во весь экран"
+              aria-label={`Открыть кадр ${i + 1}${img.zone ? ` (${img.zone})` : ""} во весь экран`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -79,7 +79,7 @@ export default function Lightbox({
                 alt={imageAlt(project, img)}
                 width={img.w ?? undefined}
                 height={img.h ?? undefined}
-                loading={i === 0 ? "eager" : "lazy"}
+                loading="lazy"
                 decoding="async"
                 className={
                   ratio

@@ -1,10 +1,9 @@
 import Link from "next/link";
-import LeadForm from "@/components/LeadForm";
 import Picture from "@/components/Picture";
 import PlasterReveal from "@/components/PlasterReveal";
-import Otzyvy from "@/components/Otzyvy";
 import { projects, projectMeta, imageAlt, KIND_LABEL } from "@/lib/projects";
-import { tgLink } from "@/lib/contacts";
+import { tgLink, channels } from "@/lib/contacts";
+import ChannelButtons from "@/components/ChannelButtons";
 
 /**
  * Главная по направлению IV «Синтез» (выбор Дарьи):
@@ -43,7 +42,7 @@ export default function Home() {
               Полный цикл — от замера до готового ремонта. 20 лет практики. Проекты от 2 500 ₽/м².
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3">
-              <Link href="#zayavka" className="btn btn-wine">
+              <Link href="/kontakty/" className="btn btn-wine">
                 Записаться на бесплатный замер
               </Link>
               {tg && (
@@ -172,22 +171,21 @@ export default function Home() {
         <PlasterReveal mode="venetian" />
       </section>
 
-      {/* ОТЗЫВЫ — только настоящие; секция появится сама, когда в otzyvy.json ляжет первый */}
-      <Otzyvy />
-
-      {/* ЗАЯВКА (чистый фон, ничего не конкурирует с CTA) */}
-      <section className="max-w-page mx-auto px-5 py-20">
-        <div className="grid md:grid-cols-[1.2fr_1fr] gap-10 items-start">
-          <div data-reveal>
-            <LeadForm />
-          </div>
-          <p data-reveal className="font-body text-body text-graphite/85">
-            Дарья Чернявская — дизайнер интерьера с 20-летней практикой. Квартиры, дома и коммерческие
-            пространства в Тюмени и по всей России. Полный цикл: встреча, замер, планировки,
-            3D-визуализация, сборка проекта и сопровождение до готового ремонта. Каждый проект —
-            индивидуально, без шаблонных пакетов.
-          </p>
+      {/* КОНТАКТЫ вместо формы — живые каналы */}
+      <section className="max-w-page mx-auto px-5 py-20 text-center">
+        <h2 data-reveal className="font-display text-h2 mb-4">
+          Обсудить проект
+        </h2>
+        <p data-reveal className="font-body text-body text-graphite/80 max-w-[48ch] mx-auto mb-8">
+          Первая консультация и замер — бесплатно. Напишите в Telegram, MAX или позвоните — отвечаю лично.
+        </p>
+        <div data-reveal className="flex flex-wrap items-center justify-center gap-4">
+          <ChannelButtons items={channels("Здравствуйте! Пишу с сайта.")} />
         </div>
+        <p data-reveal className="font-body text-body text-graphite/70 mt-8 max-w-[42ch] mx-auto">
+          Дарья Чернявская — дизайнер интерьера с 20-летней практикой. Квартиры, дома и коммерческие
+          пространства в Тюмени и по всей России. Полный цикл, без шаблонных пакетов.
+        </p>
       </section>
     </>
   );

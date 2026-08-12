@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { formHref } from "@/lib/routes";
 
 /**
  * Шапка по приёму Dieter Vander Velpen: пары разреженных капс-ссылок
@@ -41,8 +40,6 @@ export default function Header() {
         : "text-graphite/75 hover:text-graphite"
     }`;
 
-  const write = formHref(pathname);
-
   return (
     <header
       ref={panelRef}
@@ -72,12 +69,12 @@ export default function Header() {
             <Link href="/kontakty/" className={link("/kontakty")} aria-current={isActive("/kontakty") ? "page" : undefined}>
               Контакты
             </Link>
-            <a
-              href={write}
+            <Link
+              href="/kontakty/"
               className="font-ui text-ui uppercase tracking-caps bg-wine text-ivory-light rounded-full px-4 py-2 hover:brightness-110 transition"
             >
               Написать
-            </a>
+            </Link>
           </div>
 
           {/* мобильный бургер */}
@@ -112,9 +109,9 @@ export default function Header() {
             <Link href="/kontakty/" className={link("/kontakty")}>
               Контакты
             </Link>
-            <a href={write} className="btn btn-wine mx-auto px-8">
+            <Link href="/kontakty/" className="btn btn-wine mx-auto px-8">
               Написать
-            </a>
+            </Link>
           </nav>
         )}
       </div>

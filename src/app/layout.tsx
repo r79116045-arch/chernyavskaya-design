@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import StickyCta from "@/components/StickyCta";
+import FloatingContacts from "@/components/FloatingContacts";
 import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 
@@ -22,8 +23,8 @@ const display = localFont({
   preload: false,
 });
 
-// TODO(домен): когда появится домен — добавить metadataBase и canonical.
 export const metadata: Metadata = {
+  metadataBase: new URL("https://дарьячернявская.рф"),
   title: {
     default: "Дарья Чернявская — дизайн интерьера в Тюмени",
     template: "%s — Дарья Чернявская",
@@ -39,6 +40,13 @@ export const metadata: Metadata = {
     "дизайн интерьера дома",
     "дизайн коммерческих помещений",
   ],
+  openGraph: {
+    title: "Дарья Чернявская — дизайн интерьера в Тюмени",
+    description:
+      "Дизайн интерьера квартир, домов и коммерческих пространств. Полный цикл: от замера до готового ремонта. 20 лет практики.",
+    type: "website",
+    locale: "ru_RU",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -54,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <Footer />
         <StickyCta />
+        <FloatingContacts />
       </body>
     </html>
   );

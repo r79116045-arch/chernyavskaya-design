@@ -6,7 +6,7 @@
     "year": null,
     "city": "Тюмень",
     "type": "дом",
-    "desc": "Двухуровневая квартира с мансардой: кухня-столовая под открытыми деревянными балками и кирпичной кладкой, гостиная с синими акцентами и арочными проёмами, ёлочка-паркет.",
+    "desc": "Двухуровневый дом с мансардой: кухня-столовая под открытыми деревянными балками и кирпичной кладкой, гостиная с синими акцентами и арочными проёмами, ёлочка-паркет.",
     "order": 1,
     "kind": "photo",
     "images": [
@@ -243,15 +243,15 @@
       "kind": "render"
     },
     "cover": {
-      "src": "/images/projects/bereznyaki/002.jpg",
-      "w": 2200,
-      "h": 1580,
-      "avif": "/images/projects/bereznyaki/_v/002-640.avif 640w, /images/projects/bereznyaki/_v/002-960.avif 960w, /images/projects/bereznyaki/_v/002-1280.avif 1280w, /images/projects/bereznyaki/_v/002-1600.avif 1600w, /images/projects/bereznyaki/_v/002-2200.avif 2200w",
-      "webp": "/images/projects/bereznyaki/_v/002-640.webp 640w, /images/projects/bereznyaki/_v/002-960.webp 960w, /images/projects/bereznyaki/_v/002-1280.webp 1280w, /images/projects/bereznyaki/_v/002-1600.webp 1600w, /images/projects/bereznyaki/_v/002-2200.webp 2200w",
-      "jpg": "/images/projects/bereznyaki/_v/002-640.jpg 640w, /images/projects/bereznyaki/_v/002-960.jpg 960w, /images/projects/bereznyaki/_v/002-1280.jpg 1280w, /images/projects/bereznyaki/_v/002-1600.jpg 1600w, /images/projects/bereznyaki/_v/002-2200.jpg 2200w",
+      "src": "/images/projects/bereznyaki/030.jpg",
+      "w": 1798,
+      "h": 1348,
+      "avif": "/images/projects/bereznyaki/_v/030-640.avif 640w, /images/projects/bereznyaki/_v/030-960.avif 960w, /images/projects/bereznyaki/_v/030-1280.avif 1280w, /images/projects/bereznyaki/_v/030-1600.avif 1600w",
+      "webp": "/images/projects/bereznyaki/_v/030-640.webp 640w, /images/projects/bereznyaki/_v/030-960.webp 960w, /images/projects/bereznyaki/_v/030-1280.webp 1280w, /images/projects/bereznyaki/_v/030-1600.webp 1600w",
+      "jpg": "/images/projects/bereznyaki/_v/030-640.jpg 640w, /images/projects/bereznyaki/_v/030-960.jpg 960w, /images/projects/bereznyaki/_v/030-1280.jpg 1280w, /images/projects/bereznyaki/_v/030-1600.jpg 1600w",
       "zone": "",
       "caption": "",
-      "kind": "render"
+      "kind": "photo"
     },
     "featured": {
       "src": "/images/projects/bereznyaki/012.jpg",
@@ -560,7 +560,7 @@
     "year": null,
     "city": "Тюмень",
     "type": "квартира",
-    "desc": "Светлая квартира в нейтральной гамме: гостиная с изумрудным диваном и обеденной зоной, спальни в мягких тонах, санузлы в мраморе. Показаны и визуализация, и фото реализации.",
+    "desc": "Светлая квартира в нейтральной гамме: гостиная с изумрудным диваном и обеденной зоной, спальни в мягких тонах, санузлы в мраморе.",
     "order": 3,
     "kind": "photo",
     "images": [
@@ -1916,12 +1916,12 @@
   },
   {
     "slug": "dom-vyacheslav",
-    "title": "Квартира с оливковой кухней",
+    "title": "Дом с оливковой кухней",
     "area": null,
     "year": null,
     "city": "Тюмень",
     "type": "дом",
-    "desc": "Светлая квартира с мраморными акцентами: кухня-гостиная с оливковыми фасадами и стеллажом, спальни в тёплой бежевой гамме, компактные санузлы с прачечной.",
+    "desc": "Светлый дом с мраморными акцентами: кухня-гостиная с оливковыми фасадами и стеллажом, спальни в тёплой бежевой гамме, компактные санузлы с прачечной.",
     "order": 7,
     "kind": "render",
     "images": [
@@ -3039,50 +3039,6 @@
         "zone": "",
         "caption": "",
         "kind": "render"
-      },
-      {
-        "src": "/images/projects/seify/041.jpg",
-        "w": 2200,
-        "h": 1238,
-        "avif": "/images/projects/seify/_v/041-640.avif 640w, /images/projects/seify/_v/041-960.avif 960w, /images/projects/seify/_v/041-1280.avif 1280w, /images/projects/seify/_v/041-1600.avif 1600w, /images/projects/seify/_v/041-2200.avif 2200w",
-        "webp": "/images/projects/seify/_v/041-640.webp 640w, /images/projects/seify/_v/041-960.webp 960w, /images/projects/seify/_v/041-1280.webp 1280w, /images/projects/seify/_v/041-1600.webp 1600w, /images/projects/seify/_v/041-2200.webp 2200w",
-        "jpg": "/images/projects/seify/_v/041-640.jpg 640w, /images/projects/seify/_v/041-960.jpg 960w, /images/projects/seify/_v/041-1280.jpg 1280w, /images/projects/seify/_v/041-1600.jpg 1600w, /images/projects/seify/_v/041-2200.jpg 2200w",
-        "zone": "",
-        "caption": "",
-        "kind": "render"
-      },
-      {
-        "src": "/images/projects/seify/042.jpg",
-        "w": 2200,
-        "h": 1238,
-        "avif": "/images/projects/seify/_v/042-640.avif 640w, /images/projects/seify/_v/042-960.avif 960w, /images/projects/seify/_v/042-1280.avif 1280w, /images/projects/seify/_v/042-1600.avif 1600w, /images/projects/seify/_v/042-2200.avif 2200w",
-        "webp": "/images/projects/seify/_v/042-640.webp 640w, /images/projects/seify/_v/042-960.webp 960w, /images/projects/seify/_v/042-1280.webp 1280w, /images/projects/seify/_v/042-1600.webp 1600w, /images/projects/seify/_v/042-2200.webp 2200w",
-        "jpg": "/images/projects/seify/_v/042-640.jpg 640w, /images/projects/seify/_v/042-960.jpg 960w, /images/projects/seify/_v/042-1280.jpg 1280w, /images/projects/seify/_v/042-1600.jpg 1600w, /images/projects/seify/_v/042-2200.jpg 2200w",
-        "zone": "",
-        "caption": "",
-        "kind": "render"
-      },
-      {
-        "src": "/images/projects/seify/043.jpg",
-        "w": 2200,
-        "h": 1238,
-        "avif": "/images/projects/seify/_v/043-640.avif 640w, /images/projects/seify/_v/043-960.avif 960w, /images/projects/seify/_v/043-1280.avif 1280w, /images/projects/seify/_v/043-1600.avif 1600w, /images/projects/seify/_v/043-2200.avif 2200w",
-        "webp": "/images/projects/seify/_v/043-640.webp 640w, /images/projects/seify/_v/043-960.webp 960w, /images/projects/seify/_v/043-1280.webp 1280w, /images/projects/seify/_v/043-1600.webp 1600w, /images/projects/seify/_v/043-2200.webp 2200w",
-        "jpg": "/images/projects/seify/_v/043-640.jpg 640w, /images/projects/seify/_v/043-960.jpg 960w, /images/projects/seify/_v/043-1280.jpg 1280w, /images/projects/seify/_v/043-1600.jpg 1600w, /images/projects/seify/_v/043-2200.jpg 2200w",
-        "zone": "",
-        "caption": "",
-        "kind": "render"
-      },
-      {
-        "src": "/images/projects/seify/044.jpg",
-        "w": 2200,
-        "h": 1238,
-        "avif": "/images/projects/seify/_v/044-640.avif 640w, /images/projects/seify/_v/044-960.avif 960w, /images/projects/seify/_v/044-1280.avif 1280w, /images/projects/seify/_v/044-1600.avif 1600w, /images/projects/seify/_v/044-2200.avif 2200w",
-        "webp": "/images/projects/seify/_v/044-640.webp 640w, /images/projects/seify/_v/044-960.webp 960w, /images/projects/seify/_v/044-1280.webp 1280w, /images/projects/seify/_v/044-1600.webp 1600w, /images/projects/seify/_v/044-2200.webp 2200w",
-        "jpg": "/images/projects/seify/_v/044-640.jpg 640w, /images/projects/seify/_v/044-960.jpg 960w, /images/projects/seify/_v/044-1280.jpg 1280w, /images/projects/seify/_v/044-1600.jpg 1600w, /images/projects/seify/_v/044-2200.jpg 2200w",
-        "zone": "",
-        "caption": "",
-        "kind": "render"
       }
     ],
     "hero": {
@@ -3493,6 +3449,129 @@
       "zone": "",
       "caption": "",
       "kind": "render"
+    }
+  },
+  {
+    "slug": "teplye-tona",
+    "title": "Квартира в тёплых тонах",
+    "area": 80,
+    "year": null,
+    "city": "Тюмень",
+    "type": "квартира",
+    "desc": "Современная квартира 80 м² в тёплой бежево-коричневой гамме. Мягкий свет, природные оттенки дерева и камня, уютная атмосфера. Проект в процессе реализации.",
+    "order": 11,
+    "kind": "photo",
+    "images": [
+      {
+        "src": "/images/projects/teplye-tona/01.jpg",
+        "w": 1900,
+        "h": 1400,
+        "avif": "/images/projects/teplye-tona/_v/01-640.avif 640w, /images/projects/teplye-tona/_v/01-960.avif 960w, /images/projects/teplye-tona/_v/01-1280.avif 1280w, /images/projects/teplye-tona/_v/01-1600.avif 1600w",
+        "webp": "/images/projects/teplye-tona/_v/01-640.webp 640w, /images/projects/teplye-tona/_v/01-960.webp 960w, /images/projects/teplye-tona/_v/01-1280.webp 1280w, /images/projects/teplye-tona/_v/01-1600.webp 1600w",
+        "jpg": "/images/projects/teplye-tona/_v/01-640.jpg 640w, /images/projects/teplye-tona/_v/01-960.jpg 960w, /images/projects/teplye-tona/_v/01-1280.jpg 1280w, /images/projects/teplye-tona/_v/01-1600.jpg 1600w",
+        "zone": "",
+        "caption": "",
+        "kind": "photo"
+      },
+      {
+        "src": "/images/projects/teplye-tona/02.jpg",
+        "w": 1843,
+        "h": 1384,
+        "avif": "/images/projects/teplye-tona/_v/02-640.avif 640w, /images/projects/teplye-tona/_v/02-960.avif 960w, /images/projects/teplye-tona/_v/02-1280.avif 1280w, /images/projects/teplye-tona/_v/02-1600.avif 1600w",
+        "webp": "/images/projects/teplye-tona/_v/02-640.webp 640w, /images/projects/teplye-tona/_v/02-960.webp 960w, /images/projects/teplye-tona/_v/02-1280.webp 1280w, /images/projects/teplye-tona/_v/02-1600.webp 1600w",
+        "jpg": "/images/projects/teplye-tona/_v/02-640.jpg 640w, /images/projects/teplye-tona/_v/02-960.jpg 960w, /images/projects/teplye-tona/_v/02-1280.jpg 1280w, /images/projects/teplye-tona/_v/02-1600.jpg 1600w",
+        "zone": "",
+        "caption": "",
+        "kind": "photo"
+      },
+      {
+        "src": "/images/projects/teplye-tona/03.jpg",
+        "w": 1900,
+        "h": 1400,
+        "avif": "/images/projects/teplye-tona/_v/03-640.avif 640w, /images/projects/teplye-tona/_v/03-960.avif 960w, /images/projects/teplye-tona/_v/03-1280.avif 1280w, /images/projects/teplye-tona/_v/03-1600.avif 1600w",
+        "webp": "/images/projects/teplye-tona/_v/03-640.webp 640w, /images/projects/teplye-tona/_v/03-960.webp 960w, /images/projects/teplye-tona/_v/03-1280.webp 1280w, /images/projects/teplye-tona/_v/03-1600.webp 1600w",
+        "jpg": "/images/projects/teplye-tona/_v/03-640.jpg 640w, /images/projects/teplye-tona/_v/03-960.jpg 960w, /images/projects/teplye-tona/_v/03-1280.jpg 1280w, /images/projects/teplye-tona/_v/03-1600.jpg 1600w",
+        "zone": "",
+        "caption": "",
+        "kind": "photo"
+      },
+      {
+        "src": "/images/projects/teplye-tona/04.jpg",
+        "w": 1857,
+        "h": 1400,
+        "avif": "/images/projects/teplye-tona/_v/04-640.avif 640w, /images/projects/teplye-tona/_v/04-960.avif 960w, /images/projects/teplye-tona/_v/04-1280.avif 1280w, /images/projects/teplye-tona/_v/04-1600.avif 1600w",
+        "webp": "/images/projects/teplye-tona/_v/04-640.webp 640w, /images/projects/teplye-tona/_v/04-960.webp 960w, /images/projects/teplye-tona/_v/04-1280.webp 1280w, /images/projects/teplye-tona/_v/04-1600.webp 1600w",
+        "jpg": "/images/projects/teplye-tona/_v/04-640.jpg 640w, /images/projects/teplye-tona/_v/04-960.jpg 960w, /images/projects/teplye-tona/_v/04-1280.jpg 1280w, /images/projects/teplye-tona/_v/04-1600.jpg 1600w",
+        "zone": "",
+        "caption": "",
+        "kind": "photo"
+      },
+      {
+        "src": "/images/projects/teplye-tona/05.jpg",
+        "w": 1839,
+        "h": 1263,
+        "avif": "/images/projects/teplye-tona/_v/05-640.avif 640w, /images/projects/teplye-tona/_v/05-960.avif 960w, /images/projects/teplye-tona/_v/05-1280.avif 1280w, /images/projects/teplye-tona/_v/05-1600.avif 1600w",
+        "webp": "/images/projects/teplye-tona/_v/05-640.webp 640w, /images/projects/teplye-tona/_v/05-960.webp 960w, /images/projects/teplye-tona/_v/05-1280.webp 1280w, /images/projects/teplye-tona/_v/05-1600.webp 1600w",
+        "jpg": "/images/projects/teplye-tona/_v/05-640.jpg 640w, /images/projects/teplye-tona/_v/05-960.jpg 960w, /images/projects/teplye-tona/_v/05-1280.jpg 1280w, /images/projects/teplye-tona/_v/05-1600.jpg 1600w",
+        "zone": "",
+        "caption": "",
+        "kind": "photo"
+      },
+      {
+        "src": "/images/projects/teplye-tona/06.jpg",
+        "w": 1806,
+        "h": 1317,
+        "avif": "/images/projects/teplye-tona/_v/06-640.avif 640w, /images/projects/teplye-tona/_v/06-960.avif 960w, /images/projects/teplye-tona/_v/06-1280.avif 1280w, /images/projects/teplye-tona/_v/06-1600.avif 1600w",
+        "webp": "/images/projects/teplye-tona/_v/06-640.webp 640w, /images/projects/teplye-tona/_v/06-960.webp 960w, /images/projects/teplye-tona/_v/06-1280.webp 1280w, /images/projects/teplye-tona/_v/06-1600.webp 1600w",
+        "jpg": "/images/projects/teplye-tona/_v/06-640.jpg 640w, /images/projects/teplye-tona/_v/06-960.jpg 960w, /images/projects/teplye-tona/_v/06-1280.jpg 1280w, /images/projects/teplye-tona/_v/06-1600.jpg 1600w",
+        "zone": "",
+        "caption": "",
+        "kind": "photo"
+      },
+      {
+        "src": "/images/projects/teplye-tona/07.jpg",
+        "w": 1900,
+        "h": 1400,
+        "avif": "/images/projects/teplye-tona/_v/07-640.avif 640w, /images/projects/teplye-tona/_v/07-960.avif 960w, /images/projects/teplye-tona/_v/07-1280.avif 1280w, /images/projects/teplye-tona/_v/07-1600.avif 1600w",
+        "webp": "/images/projects/teplye-tona/_v/07-640.webp 640w, /images/projects/teplye-tona/_v/07-960.webp 960w, /images/projects/teplye-tona/_v/07-1280.webp 1280w, /images/projects/teplye-tona/_v/07-1600.webp 1600w",
+        "jpg": "/images/projects/teplye-tona/_v/07-640.jpg 640w, /images/projects/teplye-tona/_v/07-960.jpg 960w, /images/projects/teplye-tona/_v/07-1280.jpg 1280w, /images/projects/teplye-tona/_v/07-1600.jpg 1600w",
+        "zone": "",
+        "caption": "",
+        "kind": "photo"
+      }
+    ],
+    "hero": {
+      "src": "/images/projects/teplye-tona/01.jpg",
+      "w": 1900,
+      "h": 1400,
+      "avif": "/images/projects/teplye-tona/_v/01-640.avif 640w, /images/projects/teplye-tona/_v/01-960.avif 960w, /images/projects/teplye-tona/_v/01-1280.avif 1280w, /images/projects/teplye-tona/_v/01-1600.avif 1600w",
+      "webp": "/images/projects/teplye-tona/_v/01-640.webp 640w, /images/projects/teplye-tona/_v/01-960.webp 960w, /images/projects/teplye-tona/_v/01-1280.webp 1280w, /images/projects/teplye-tona/_v/01-1600.webp 1600w",
+      "jpg": "/images/projects/teplye-tona/_v/01-640.jpg 640w, /images/projects/teplye-tona/_v/01-960.jpg 960w, /images/projects/teplye-tona/_v/01-1280.jpg 1280w, /images/projects/teplye-tona/_v/01-1600.jpg 1600w",
+      "zone": "",
+      "caption": "",
+      "kind": "photo"
+    },
+    "cover": {
+      "src": "/images/projects/teplye-tona/01.jpg",
+      "w": 1900,
+      "h": 1400,
+      "avif": "/images/projects/teplye-tona/_v/01-640.avif 640w, /images/projects/teplye-tona/_v/01-960.avif 960w, /images/projects/teplye-tona/_v/01-1280.avif 1280w, /images/projects/teplye-tona/_v/01-1600.avif 1600w",
+      "webp": "/images/projects/teplye-tona/_v/01-640.webp 640w, /images/projects/teplye-tona/_v/01-960.webp 960w, /images/projects/teplye-tona/_v/01-1280.webp 1280w, /images/projects/teplye-tona/_v/01-1600.webp 1600w",
+      "jpg": "/images/projects/teplye-tona/_v/01-640.jpg 640w, /images/projects/teplye-tona/_v/01-960.jpg 960w, /images/projects/teplye-tona/_v/01-1280.jpg 1280w, /images/projects/teplye-tona/_v/01-1600.jpg 1600w",
+      "zone": "",
+      "caption": "",
+      "kind": "photo"
+    },
+    "featured": {
+      "src": "/images/projects/teplye-tona/07.jpg",
+      "w": 1900,
+      "h": 1400,
+      "avif": "/images/projects/teplye-tona/_v/07-640.avif 640w, /images/projects/teplye-tona/_v/07-960.avif 960w, /images/projects/teplye-tona/_v/07-1280.avif 1280w, /images/projects/teplye-tona/_v/07-1600.avif 1600w",
+      "webp": "/images/projects/teplye-tona/_v/07-640.webp 640w, /images/projects/teplye-tona/_v/07-960.webp 960w, /images/projects/teplye-tona/_v/07-1280.webp 1280w, /images/projects/teplye-tona/_v/07-1600.webp 1600w",
+      "jpg": "/images/projects/teplye-tona/_v/07-640.jpg 640w, /images/projects/teplye-tona/_v/07-960.jpg 960w, /images/projects/teplye-tona/_v/07-1280.jpg 1280w, /images/projects/teplye-tona/_v/07-1600.jpg 1600w",
+      "zone": "",
+      "caption": "",
+      "kind": "photo"
     }
   }
 ]

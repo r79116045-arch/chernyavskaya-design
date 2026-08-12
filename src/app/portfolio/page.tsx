@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Picture from "@/components/Picture";
-import LeadForm from "@/components/LeadForm";
+import ChannelButtons from "@/components/ChannelButtons";
 import { projects, projectMeta, imageAlt } from "@/lib/projects";
+import { channels } from "@/lib/contacts";
 
 export const metadata: Metadata = {
   title: "Портфолио — дизайн интерьера в Тюмени",
@@ -72,11 +73,14 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Портфолио — самая листаемая страница: форма нужна прямо здесь (и якорь для липкой панели) */}
+      {/* Контакты вместо формы */}
       <section className="max-w-page mx-auto px-5 pb-20">
         <div className="grid md:grid-cols-[1.2fr_1fr] gap-10 items-start">
-          <div data-reveal>
-            <LeadForm />
+          <div data-reveal className="text-center md:text-left">
+            <p className="font-display text-h3 mb-3">Понравился проект?</p>
+            <div className="flex flex-wrap items-center gap-3 justify-center md:justify-start">
+              <ChannelButtons items={channels("Здравствуйте! Пишу с сайта.")} />
+            </div>
           </div>
           <p data-reveal className="font-body text-body text-graphite/85">
             Понравился какой-то из проектов? Расскажите о своей квартире или доме — обсудим, как

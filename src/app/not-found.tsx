@@ -9,8 +9,8 @@ export default function NotFound() {
         Зато есть проекты, которые стоит посмотреть, — или напишите Дарье напрямую.
       </p>
       <div className="flex flex-wrap gap-3 justify-center mt-9">
-        <Link href="/portfolio" className="btn btn-graphite">Смотреть портфолио</Link>
-        <Link href="/kontakty#zayavka" className="btn btn-ghost-dark">Написать</Link>
+        <Link href="/portfolio/" className="btn btn-graphite">Смотреть портфолио</Link>
+        <Link href="/kontakty/" className="btn btn-ghost-dark">Контакты</Link>
       </div>
     </section>
   );

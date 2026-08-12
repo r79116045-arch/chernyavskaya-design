@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects, getProject, projectMeta, nextProject, imageAlt, KIND_LABEL } from "@/lib/projects";
-import LeadForm from "@/components/LeadForm";
 import Picture from "@/components/Picture";
 import Lightbox from "@/components/Lightbox";
+import ChannelButtons from "@/components/ChannelButtons";
+import { channels } from "@/lib/contacts";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -98,10 +99,13 @@ export default async function ProjectPage({
 
       <section className="max-w-page mx-auto px-5 pb-20">
 
-        {/* Заявка с контекстом проекта — в Telegram уйдёт «Смотрел(а): проект …» */}
+        {/* Контакты с контекстом проекта */}
         <div className="grid md:grid-cols-[1.2fr_1fr] gap-10 items-start">
-          <div data-reveal>
-            <LeadForm context={p.title} />
+          <div data-reveal className="text-center md:text-left">
+            <p className="font-display text-h3 mb-3">Понравился проект?</p>
+            <div className="flex flex-wrap items-center gap-3 justify-center md:justify-start">
+              <ChannelButtons items={channels(p.title)} />
+            </div>
           </div>
           <div data-reveal>
             <p className="font-body text-body text-graphite/85">

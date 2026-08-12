@@ -1,10 +1,6 @@
 /**
  * Единственный источник контактов сайта.
  * ПРАВИЛО: пустое значение → кнопка/ссылка НЕ рендерится.
- * Лучше две рабочие кнопки, чем пять, ведущих в никуда.
- *
- * TODO(Дарья): телефон, ник Telegram, персональная ссылка MAX (в MAX: «поделиться профилем» —
- * прислать строку как есть, шаблон не угадываем). WhatsApp она не называла — кнопки нет.
  */
 
 export const contacts = {
@@ -20,8 +16,8 @@ export const contacts = {
   /** Персональная ссылка MAX целиком, как прислала Дарья.
       ⚠️ По НОМЕРУ ссылок в MAX НЕ СУЩЕСТВУЕТ (проверено 23.07, help.max.ru) —
       только ссылка профиля: в MAX «Поделиться профилем». Ждём от Дарьи. */
-  maxUrl: "",
-  /** Почта для юридических обращений (152-ФЗ: отзыв согласия) */
+  maxUrl: "https://max.ru/u/f9LHodD0cOKKMKEWMIT4NUmOHrlYN-vlJTHWlq_5HOdjzBa8tuzvHFi2oHY",
+  /** Почта Дарьи для прямых обращений */
   email: "ap1688@yandex.ru",
 } as const;
 
@@ -38,7 +34,7 @@ export const tgLink = (text?: string) =>
 
 export const maxLink = () => contacts.maxUrl || "";
 
-export type Channel = { kind: "tel" | "tg" | "max"; label: string; href: string };
+export type Channel = { kind: "tel" | "tg" | "max" | "copy"; label: string; href: string };
 
 /** Живые каналы связи. context — что человек смотрел (уходит в текст сообщения). */
 export function channels(context?: string): Channel[] {
@@ -48,7 +44,7 @@ export function channels(context?: string): Channel[] {
   const list: Channel[] = [];
   if (contacts.telegram) list.push({ kind: "tg", label: "Telegram", href: tgLink(hello) });
   if (contacts.maxUrl) list.push({ kind: "max", label: "MAX", href: maxLink() });
-  if (contacts.phoneRaw) list.push({ kind: "tel", label: "Позвонить", href: tel() });
+  if (contacts.phoneRaw) list.push({ kind: "copy", label: "Скопировать номер", href: contacts.phoneHuman });
   return list;
 }
 

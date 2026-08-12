@@ -1,68 +1,105 @@
 import type { Metadata } from "next";
-import LeadForm from "@/components/LeadForm";
+import ChannelButtons from "@/components/ChannelButtons";
+import { channels } from "@/lib/contacts";
 
 export const metadata: Metadata = {
-  title: "Услуги и цены — дизайн интерьера от 2 500 ₽/м²",
+  title: "Дизайн-проект от 2 500 ₽/м² — состав, этапы, цены",
   description:
     "Полный цикл дизайна интерьера в Тюмени: замер, планировки, 3D-визуализация, рабочий проект, " +
-    "авторский надзор и комплектация. От 2 500 ₽/м², всё индивидуально.",
+    "авторский надзор. От 2 500 ₽/м², всё индивидуально.",
 };
 
-// Этапы — дословно из анкеты Дарьи (в.33), развёрнуты в понятные клиенту шаги.
-const STEPS = [
-  { n: "01", t: "Встреча", d: "Знакомимся, слушаю, как вы живёте и чего не хватает дому. Бесплатно." },
-  { n: "02", t: "Замер", d: "Приезжаю на объект, снимаю точные размеры и особенности. Бесплатно." },
-  { n: "03", t: "Планировки", d: "Варианты планировочных решений — выбираем то, в котором удобно жить." },
-  { n: "04", t: "3D-визуализация", d: "Вы видите будущий интерьер до ремонта: свет, фактуры, мебель." },
-  { n: "05", t: "Сборка проекта", d: "Рабочие чертежи и спецификации — всё, что нужно строителям." },
-  { n: "06", t: "Ремонт", d: "Сопровождаю до результата: надзор, комплектация, решение вопросов." },
+const SOSTAV = [
+  { t: "Планировки", d: "Проработка всех вариантов. Ищем оптимальное решение с учётом особенностей именно вашей семьи и вашего образа жизни." },
+  { t: "3D-визуализации", d: "Фотореалистичные рендеры всех помещений. Видите свет, фактуры, цвет стен и мебель до начала ремонта." },
+  { t: "Рабочие чертежи", d: "Полный комплект для строителей: планы стен, электрика, сантехника — всё, что нужно для точной реализации." },
+  { t: "Спецификации", d: "Перечень материалов и оборудования с артикулами. Никаких «ну вы поняли» — подрядчик получает конкретные позиции." },
+  { t: "Авторский надзор", d: "Регулярные выезды на объект. Проверяю, что строят по проекту, а не «как всегда». Решаю вопросы на месте." },
 ];
+
+const STEPS = [
+  { t: "Встреча", d: "Знакомимся, слушаю, как вы живёте и чего не хватает дому." },
+  { t: "Замер", d: "Приезжаю на объект, снимаю точные размеры и особенности." },
+  { t: "Планировки", d: "Варианты решений — выбираем то, в котором удобно жить." },
+  { t: "3D-визуализация", d: "Вы видите будущий интерьер до ремонта: свет, фактуры, мебель." },
+  { t: "Сборка проекта", d: "Рабочие чертежи и спецификации — всё для строителей." },
+  { t: "Ремонт", d: "Сопровождаю до результата: надзор, комплектация, решение вопросов." },
+];
+
+function NumberedList({ items }: { items: { t: string; d: string }[] }) {
+  return (
+    <div className="space-y-0">
+      {items.map((s, i) => (
+        <div key={s.t} data-reveal
+          className="flex gap-5 items-baseline py-5 border-b border-graphite/8 last:border-b-0 group">
+          <span className="font-display text-h2 font-light text-wine tabular-nums leading-none shrink-0 w-10 text-right">
+            {i + 1}
+          </span>
+          <div>
+            <h3 className="font-display text-card font-medium">{s.t}</h3>
+            <p className="font-body text-ui text-graphite/70 mt-1">{s.d}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function Uslugi() {
   return (
     <>
-      {/* ритм страниц: крупные блоки дышат одинаково — py-20, как на главной */}
-      <section className="max-w-page mx-auto px-5 py-20">
+      {/* ── INTRO ── */}
+      <section className="max-w-page mx-auto px-5 pt-20 pb-10">
         <h1 data-reveal className="font-display text-h1 font-light">
-          Услуги и цены
+          От идеи — до ключей
         </h1>
-        <p data-reveal className="caps text-graphite/80 mt-3">
-          полный цикл · от 2 500 ₽/м² · всё индивидуально
+        <div data-reveal className="mt-4 h-px w-12 bg-wine/50" />
+        <p data-reveal className="font-body text-body text-graphite/75 mt-6 max-w-[52ch]">
+          Квартиры, дома и коммерческие пространства — в Тюмени и по всей России.
+          Без шаблонных пакетов. <span className="text-graphite/90 font-medium">От 2 500 ₽ за м²</span>,
+          точную цену называю после бесплатного замера.
         </p>
+      </section>
 
-        <div data-reveal className="mt-10 max-w-[62ch]">
-          <p className="font-body text-lead text-graphite/85">
-            Квартиры, дома и коммерческие пространства — в Тюмени и по всей России.
-            Работаю без шаблонных пакетов: состав проекта собирается под вашу задачу
-            и бюджет. Цена — от 2 500 ₽ за м², точную назову после бесплатного замера.
-          </p>
-        </div>
-
-        <h2 data-reveal className="font-display text-h2 mt-16 mb-8">
-          Как идёт работа
-        </h2>
-        <div className="grid md:grid-cols-2 gap-x-10 gap-y-8">
-          {STEPS.map((s) => (
-            <div key={s.n} data-reveal className="flex gap-5">
-              <span className="font-display italic text-wine text-h3 leading-none pt-1">{s.n}</span>
-              <div>
-                <h3 className="font-display text-h3 font-medium">{s.t}</h3>
-                <p className="font-body text-body text-graphite/75 mt-1">{s.d}</p>
-              </div>
-            </div>
-          ))}
+      {/* ── ЧТО ВХОДИТ ── */}
+      <section id="sostav" className="bg-ivory-dark/30 scroll-mt-[var(--header-h)]">
+        <div className="max-w-page mx-auto px-5 py-16">
+          <p data-reveal className="caps-wide text-wine/80 mb-2">Состав проекта</p>
+          <h2 data-reveal className="font-display text-h2 mb-8">
+            Что входит в дизайн-проект
+          </h2>
+          <div className="max-w-[44rem]">
+            <NumberedList items={SOSTAV} />
+          </div>
         </div>
       </section>
 
-      <section className="max-w-page mx-auto px-5 pb-20">
-        <div className="grid md:grid-cols-[1.2fr_1fr] gap-10 items-start">
-          <div data-reveal>
-            <LeadForm />
+      {/* ── КАК ИДЁТ РАБОТА ── */}
+      <section id="steps" className="scroll-mt-[var(--header-h)]">
+        <div className="max-w-page mx-auto px-5 py-16">
+          <p data-reveal className="caps-wide text-wine/80 mb-2">Процесс</p>
+          <h2 data-reveal className="font-display text-h2 mb-8">
+            Как идёт работа
+          </h2>
+          <div className="max-w-[44rem]">
+            <NumberedList items={STEPS} />
           </div>
-          <p data-reveal className="font-body text-body text-graphite/80">
-            Не уверены, с чего начать? Начните со встречи — это бесплатно и ни к
-            чему не обязывает. Час разговора сэкономит месяцы ремонта.
+        </div>
+      </section>
+
+      {/* ── НАЧАТЬ ── */}
+      <section id="start" className="bg-choco text-ivory scroll-mt-[var(--header-h)]">
+        <div className="max-w-page mx-auto px-5 py-16 text-center">
+          <p data-reveal className="caps-wide text-ivory/45 mb-2">Первый шаг</p>
+          <h2 data-reveal className="font-display text-h2 mb-4">
+            Готовы начать?
+          </h2>
+          <p data-reveal className="font-body text-body text-ivory/70 max-w-[42ch] mx-auto mb-8">
+            Встреча и замер — бесплатно. Час разговора сэкономит месяцы ремонта.
           </p>
+          <div data-reveal className="flex flex-wrap items-center justify-center gap-4">
+            <ChannelButtons items={channels("Здравствуйте! Хочу обсудить дизайн-проект.")} />
+          </div>
         </div>
       </section>
     </>
